@@ -1,0 +1,16 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  
+  
+  <Design.PreviewWith>
+    <Border Padding="20">
+
+    </Border>
+  </Design.PreviewWith>
+
+  <Style Selector="Menu > MenuItem">
+    <Setter Property="Foreground" Value="White"/>
+    <Setter Property="FontSize" Value="18"/>
+    <Setter Property="Padding" Value="20, 10, 25, 10"/>
+  </Style>
+</Styles>

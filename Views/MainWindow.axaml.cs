@@ -1,12 +1,12 @@
+using ReactiveUI;
 using Avalonia.Controls;
+using ManageX.ViewModels;
 
-namespace ManageX.Views
+namespace ManageX.Views;
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }
