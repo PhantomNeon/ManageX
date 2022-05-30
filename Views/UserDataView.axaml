@@ -7,11 +7,11 @@
             x:Class="ManageX.Views.UserDataView" Padding="10">
   
   <Design.DataContext>
-    <vm:PasswordsViewModel/>
+    <vm:UserDataViewModel/>
   </Design.DataContext>
 
   <Panel Background="Red">
-    <Button Content="{+ Add Password}" VerticalAlignment="Top"/>
+    <Button Content="+ Add Password" VerticalAlignment="Top"/>
     <Grid>
       <DataGrid>
         

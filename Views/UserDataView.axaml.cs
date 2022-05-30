@@ -6,7 +6,7 @@ namespace ManageX.Views
 {
     public partial class UserDataView : UserControl
     {
-        public PasswordsView()
+        public UserDataView()
         {
             InitializeComponent();
         }
