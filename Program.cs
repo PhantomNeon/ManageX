@@ -1,6 +1,5 @@
-﻿using System;
-using Avalonia;
-using Avalonia.Controls.ApplicationLifetimes;
+﻿global using System;
+global using Avalonia;
 using Avalonia.ReactiveUI;
 
 namespace ManageX

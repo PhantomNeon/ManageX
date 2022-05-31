@@ -1,0 +1,6 @@
+{
+    "Header": ["Application", "User Name", "Password"],
+    "Application": ["Unity", "Youtube", "Spotify"],
+    "User Name": ["", "MrBeast", "Kevin Hart"],
+    "Password": ["2020WasPrettyGoodNGL", "$$$$$$", "iamspeed"]
+}
