@@ -13,7 +13,7 @@
   <Panel Background="Red">
     <Button Content="+ Add Password" VerticalAlignment="Top"/>
     <Grid>
-      <DataGrid>
+      <DataGrid Items="{Binding Headers">
         
       </DataGrid>
     </Grid>

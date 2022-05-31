@@ -8,35 +8,24 @@ using System.IO;
 namespace ManageX.Models;
 public class UserDataModel
 {
-    public ObservableCollection<string> Headers { get; set; }
-    public ObservableCollection<ObservableCollection<string>> HeaderData { get; set; }
+    public ObservableCollection<string>? Application { get; set; }
+    public ObservableCollection<string>? UserName { get; set; }
+    public ObservableCollection<string>? Password { get; set; }
 
-    public UserDataModel()
+    private void GetUserData()
     {
-        Headers = JArrayToObservableCollection<string>(GetDataFromJson("Header"));
-        GetIndividualDataFromJson();
+        dynamic? jsonFile = JsonConvert.DeserializeObject(File.ReadAllText("Services/UserData.json"));
+
+        Application = JArrayToOC(jsonFile![0]);
+        UserName = JArrayToOC(jsonFile![1]);
+        Password = JArrayToOC(jsonFile![2]);
     }
 
-    public JArray GetDataFromJson(string title)
-    {
-        dynamic jsonData = JsonConvert.DeserializeObject(File.ReadAllText("Services/UserData.json"))!;
-        return jsonData[title];
-    }
-
-    public void GetIndividualDataFromJson()
-    {
-        foreach (string header in Headers)
-        {
-            HeaderData.Add(JArrayToObservableCollection<string>(GetDataFromJson("header")));
-        }
-    }
-    
-
-    private static ObservableCollection<T> JArrayToObservableCollection<T>(JArray array)
+    public static ObservableCollection<T> JArrayToOC<T>(JArray array)
     {
         ObservableCollection<T> collection = new();
 
-        foreach(dynamic element in array)
+        foreach (dynamic element in array)
         {
             collection.Add(element);
         }
