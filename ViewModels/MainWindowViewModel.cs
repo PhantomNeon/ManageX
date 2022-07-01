@@ -10,15 +10,21 @@ public class MainWindowViewModel : ViewModelBase
 {
     public UserControl ActiveUserControl { get => activeUserControl; set => this.RaiseAndSetIfChanged(ref activeUserControl, value); }
     private UserControl activeUserControl = new HomeView();
+    private UserDataView userDataView = new();
+    private HomeView homeView = new();
 
+    public MainWindowViewModel()
+    {
+        userDataView.DataContext = new UserDataViewModel();
+    }
     public void HomeButton()
     {
-        ActiveUserControl = new HomeView();
+        ActiveUserControl = homeView;
+
     }
 
-    public void PasswordsButton()
+    public void UserDataButton()
     {
-        ActiveUserControl = new UserDataView()!;
-        ActiveUserControl.DataContext = new UserDataViewModel();    
+        ActiveUserControl = userDataView;
     }
 }

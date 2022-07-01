@@ -10,11 +10,9 @@
     <vm:UserDataViewModel/>
   </Design.DataContext>
 
-  <Panel Background="Red">
-    <Button Content="+ Add Password" VerticalAlignment="Top"/>
+  <Panel>
     <Grid>
-      <DataGrid Items="{Binding Headers">
-        
+      <DataGrid Items="{Binding UserDataList}" AutoGenerateColumns="True">
       </DataGrid>
     </Grid>
   </Panel>

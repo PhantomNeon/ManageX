@@ -25,7 +25,7 @@
                 </ItemsPanelTemplate>
             </Menu.ItemsPanel>
             <MenuItem Header="Home" Command="{Binding HomeButton}"/>
-            <MenuItem Header="Passwords" Command="{Binding PasswordsButton}"/>
+            <MenuItem Header="User Data" Command="{Binding UserDataButton}"/>
         </Menu>
         <ContentControl Grid.Column="1" Content="{Binding ActiveUserControl}"/>
     </Grid>

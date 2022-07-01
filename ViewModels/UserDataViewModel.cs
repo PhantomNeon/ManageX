@@ -9,12 +9,12 @@ namespace ManageX.ViewModels;
 
 public class UserDataViewModel : ViewModelBase
 {
-    UserDataModel userDataModel = new();
-    ObservableCollection<string> Application { get => Application; set => this.RaiseAndSetIfChanged(ref application, value); }
-    ObservableCollection<string> application = new();
+    public ObservableCollection<Data> UserDataList{ get; } = new();
 
     public UserDataViewModel()
     {
-        Application = userDataModel.Application;
+        UserDataList.Add(new Data("somemailid@bing.com", "2020wasactuallygud"));
+        UserDataList.Add(new Data("Spotify", "drakeispawg"));
+        UserDataList.Add(new Data("SomeApp", "stwongpassword"));
     }
 }
